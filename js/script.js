@@ -4,15 +4,24 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 // Bonus: L’inserimento avviene tramite un campo input
 
+const btnCheck = document.querySelector("#btn_check");
+let word;
 
-const word ='casa';
-let reverseWord = invertiParola(word);
+btnCheck.addEventListener("click", function(){
 
-if(word == reverseWord){
-    console.log('la parola è palindroma');
-  } else {
-    console.log('la parola non è palindroma');
-}
+  const wordForm = document.querySelector("#InputName");
+  word = wordForm.value;
+  let reverseWord = invertiParola(word);
+
+  if(word == reverseWord){
+      console.log('la parola è palindroma');
+      document.querySelector("#answer-text").innerHTML = `La parola inserita <strong>${word}</strong>, è palindroma in quanto il suo contrario è <strong>${reverseWord}</strong>`
+    } else {
+      console.log('la parola non è palindroma');
+      document.querySelector("#answer-text").innerHTML = `La parola inserita <strong>${word}</strong>, non è palindroma in quanto il suo contrario è <strong>${reverseWord}</strong>`
+  }
+});
+
 
 function invertiParola(wordIns){
   let reverseWord = '';
@@ -24,8 +33,7 @@ function invertiParola(wordIns){
     i--;
   }
   console.log(reverseWord);
-  return reverseWord;
-  
+  return reverseWord; 
 }
 
 
