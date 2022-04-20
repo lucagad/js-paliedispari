@@ -18,7 +18,7 @@
 
     <div class="form_box container m-3 d-flex flex-column justify-content-center align-items-center">
       <img src="https://www.filepicker.io/api/file/PrjQ7ZxTQye3aR2Tzt3N" alt="">
-      <h4 class="m-5 text-center">Verifica se la parola inserita è palindorma</h4>
+      <h4 class="m-5 text-center text-uppercase">Verifica se la parola inserita è palindorma</h4>
       <div class="mb-3 d-flex flex-column align-items-center">
 
         <div class="m-3 text-center">
@@ -36,6 +36,37 @@
       </div>
 
     </div>
+
+    <div class="form_box container m-3 d-flex flex-column justify-content-center align-items-center">
+      <img src="https://www.filepicker.io/api/file/PrjQ7ZxTQye3aR2Tzt3N" alt="">
+      <h4 class="m-5 text-center text-uppercase">Pari o dispari?</h4>
+      <div class="mb-3 d-flex flex-column align-items-center">
+
+        <div class="m-3 text-center">
+          <label class="form-label mb-3">Inserisci il tuo numero</label>
+          <input type="text" class="form-control" id="InputNumber">
+          <div class="mt-3">
+            <label for="select-type"" class="form-label">Scegli se pari o dispari</label>
+            <select id="select-type" class="form-select">
+              <option>Pari</option>
+              <option>Dispari</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn_boolean" id="btn_play">Gioca</button>
+      </div>
+
+      <div class="answer">
+
+        <p id="answer-text-number"></p>
+
+      </div>
+
+    </div>
+
+
+
   </div>
 
 
