@@ -7,20 +7,22 @@
 const btnCheck = document.querySelector("#btn_check");
 let word;
 
-btnCheck.addEventListener("click", function(){
+btnCheck.addEventListener("click", initVerifica);
 
+
+function initVerifica(){
   const wordForm = document.querySelector("#InputName");
   word = wordForm.value;
   let reverseWord = invertiParola(word);
 
-  if(word == reverseWord){
+  if(word.toLowerCase() == reverseWord.toLowerCase()){
       console.log('la parola è palindroma');
-      document.querySelector("#answer-text").innerHTML = `La parola inserita <strong>${word}</strong>, è palindroma in quanto il suo contrario è <strong>${reverseWord}</strong>`
+      document.querySelector("#answer-text").innerHTML = `La parola inserita <strong>${word.toLowerCase()}</strong>, è palindroma in quanto il suo contrario è <strong>${reverseWord.toLowerCase()}</strong>`
     } else {
       console.log('la parola non è palindroma');
-      document.querySelector("#answer-text").innerHTML = `La parola inserita <strong>${word}</strong>, non è palindroma in quanto il suo contrario è <strong>${reverseWord}</strong>`
+      document.querySelector("#answer-text").innerHTML = `La parola inserita <strong>${word.toLowerCase()}</strong>, non è palindroma in quanto il suo contrario è <strong>${reverseWord.toLowerCase()}</strong>`
   }
-});
+}
 
 
 function invertiParola(wordIns){
@@ -53,8 +55,9 @@ let sum;
 
 const btnPlay = document.querySelector("#btn_play");
 
-btnPlay.addEventListener("click", function(){
+btnPlay.addEventListener("click", initGame);
 
+function initGame(){
   const typeForm = document.querySelector("#select-type");
   const typeSelect = typeForm.value;
 
@@ -92,7 +95,7 @@ btnPlay.addEventListener("click", function(){
     document.querySelector("#answer-text-number").innerHTML = `Il numero random è: <strong>${numberComputer}</strong> <br> La somma dei due numeri è: <strong>${sum} (dispari)</strong><br> Il computer vince!`
   }
 
-});
+}
 
 
 function getRandomNumber(min, max){
